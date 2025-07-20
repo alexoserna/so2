@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #000000;
+    --text-primary: #FFFFFF;
+    --accent-purple: #D871E3;
+    --accent-green: #7FFF00;
+    --accent-pink: #FF6DCB;
+    --text-gray: #CCCCCC;
+    --nav-loop-text: #F7CFFF;
+    --inactive-dot: #666666;
+  }
+
+  * {
+    border-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+}
+
+@layer components {
+  .glitch-effect {
+    position: relative;
+    color: var(--accent-purple);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  .glitch-effect::before,
+  .glitch-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch-effect::before {
+    animation: glitch-1 0.5s infinite;
+    color: var(--accent-green);
+    z-index: -1;
+  }
+
+  .glitch-effect::after {
+    animation: glitch-2 0.5s infinite;
+    color: var(--accent-pink);
+    z-index: -2;
+  }
+
+  @keyframes glitch-1 {
+    0%, 14%, 15%, 49%, 50%, 99%, 100% {
+      transform: translate(0, 0);
+    }
+    15% {
+      transform: translate(-2px, 0);
+    }
+    50% {
+      transform: translate(2px, 0);
+    }
+  }
+
+  @keyframes glitch-2 {
+    0%, 20%, 21%, 62%, 63%, 99%, 100% {
+      transform: translate(0, 0);
+    }
+    21% {
+      transform: translate(2px, 0);
+    }
+    63% {
+      transform: translate(-2px, 0);
+    }
+  }
+
+  .noise-texture {
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 109, 203, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(127, 255, 0, 0.3) 0%, transparent 50%);
+    background-size: 100px 100px, 80px 80px, 120px 120px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    animation: noise-move 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes noise-move {
+    0% { background-position: 0 0, 40px 60px, 130px 270px; }
+    100% { background-position: 100px 100px, 140px 160px, 30px 170px; }
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: #000000;
+  }
+  
+  .text-text-primary {
+    color: #FFFFFF;
+  }
+  
+  .text-accent-purple {
+    color: #D871E3;
+  }
+  
+  .text-accent-green {
+    color: #7FFF00;
+  }
+  
+  .text-accent-pink {
+    color: #FF6DCB;
+  }
+  
+  .text-text-gray {
+    color: #CCCCCC;
+  }
+  
+  .bg-accent-purple {
+    background-color: #D871E3;
+  }
+  
+  .bg-accent-green {
+    background-color: #7FFF00;
+  }
+  
+  .border-accent-purple {
+    border-color: #D871E3;
+  }
+}

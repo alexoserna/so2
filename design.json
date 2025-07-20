@@ -1,0 +1,124 @@
+{
+  "project": "SHIKKOKU",
+  "design_style": {
+    "theme": "Dark Anime Techno",
+    "mood": "Edgy, cinematic, glitchy, manga-inspired",
+    "visual_motifs": [
+      "Anime/manga character overlays",
+      "Japanese katakana text",
+      "Mobile device mockup centering",
+      "Pixelated noise textures and dithering",
+      "Monochrome-to-color character art",
+      "Glitch transitions and line patterns"
+    ],
+    "color_palette": {
+      "background": "#000000",
+      "text_primary": "#FFFFFF",
+      "accent_purple": "#D871E3",
+      "accent_green": "#7FFF00",
+      "accent_pink": "#FF6DCB",
+      "text_gray": "#CCCCCC",
+      "nav_loop_text": "#F7CFFF",
+      "inactive_dot": "#666666"
+    },
+    "typography": {
+      "main_heading": {
+        "font_family": "Condensed Sans (All Caps)",
+        "font_weight": "900",
+        "font_size": "clamp(3rem, 10vw, 9rem)",
+        "color": "#D871E3",
+        "effects": ["glitch overlay", "blend mode: lighten", "Japanese subtitle overlay"]
+      },
+      "body_text": {
+        "font_family": "Monospace or Techno Sans",
+        "font_size": "0.85rem",
+        "color": "#CCCCCC",
+        "line_height": "1.4"
+      },
+      "japanese_text": {
+        "font_family": "Rounded Gothic Japanese",
+        "color_variants": ["#D871E3", "#7FFF00"],
+        "use_case": "background overlays, flair text"
+      }
+    }
+  },
+  "layout": {
+    "structure": [
+      "hero_banner: full-screen section with centered title and background image",
+      "horizontal_scrolling_nav: infinite marquee-style banner with site name",
+      "mobile_mockup_section: phone image centered with 'CATALOG' screen",
+      "multi-column_grid: images and manga art placed in surrounding negative space",
+      "carousel_section: pagination dots under mobile preview",
+      "blog_section: widescreen desktop screenshot preview with heading and manga post"
+    ],
+    "alignment": "centered and radial-focused",
+    "spacing": {
+      "section_padding": "4rem 1.5rem",
+      "gap_between_modules": "3rem"
+    },
+    "composition": "dense + framed by background textures"
+  },
+  "interactions": {
+    "on_scroll": [
+      "fade-in sections",
+      "parallax movement of manga background textures",
+      "glitch flickers on headings"
+    ],
+    "hover_effects": {
+      "links": "glow and underline",
+      "buttons": "gentle scale up with accent shadow",
+      "images": "slight tilt or zoom-in on hover"
+    },
+    "scroll_based_animations": [
+      "animated static texture over character backgrounds",
+      "carousel dots synced to slide scroll",
+      "fade up + opacity rise for blog teaser"
+    ],
+    "glitch_effects": {
+      "applied_to": ["main headings", "background text overlays"],
+      "style": ["RGB split", "text slice", "opacity flicker"],
+      "trigger": "on entry + hover"
+    }
+  },
+  "components": {
+    "hero_banner": {
+      "title_text": "SHIKKOKU",
+      "subtitle": "Chainsaw Man (in Japanese Katakana)",
+      "background_image": "anime close-up with red eye glow",
+      "text_overlay_style": "blend-mode + glitch"
+    },
+    "looping_nav": {
+      "text": "SHIKKOKU + repeated with stars",
+      "animation": "infinite marquee scroll",
+      "color": "#F7CFFF"
+    },
+    "mobile_preview": {
+      "device_frame": "iPhone 14 Pro style",
+      "screen_title": "CATALOG",
+      "character": "back-facing figure in black kimono",
+      "centered": true,
+      "background": "black with dotted texture"
+    },
+    "carousel_dots": {
+      "active": "#D871E3",
+      "inactive": "#666666"
+    },
+    "blog_preview": {
+      "title": "OUR BLOG",
+      "background": "screenshot of manga reading UI",
+      "layout": "floating tags, bold category blocks",
+      "manga_snippet": "Berserk 237 Chapter preview"
+    }
+  },
+  "responsive": {
+    "mobile": {
+      "font_scaling": "fluid with viewport width",
+      "layout_stack": "vertical",
+      "carousel_behavior": "swipe-based"
+    },
+    "desktop": {
+      "grid_layout": "3-column with foreground/background layering",
+      "manga_images": "positioned as background enhancements"
+    }
+  }
+}
